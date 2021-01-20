@@ -1,0 +1,64 @@
+.input{
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $textColor;
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $textColor;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $textColor;
+      }
+   .inputBox{
+    
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $textColor;
+    background-color:$bgcolor;
+    border-width:0px;
+    border:none;
+    border-bottom: 1px solid $textColor;
+    // border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   }
+    .inputBtn {
+        color: $btnText;
+        background-color: transparent;
+        background-image: none;
+        border-color: $textColor;
+        height: 3.7rem;
+        border-radius: 5px;
+      }
+      
+      .inputBtn:hover {
+        color: #fff;
+        background-color: $textColor;
+        border-color: $bgcolor;
+      }
+      
+      .inputBtn:focus, .inputBtn.focus {
+        box-shadow: 0 0 0 0.2rem $bgcolor;
+      }
+      
+      .inputBtn.disabled, .inputBtn:disabled {
+        color: $disBtn ;
+        background-color: transparent;
+      }
+      
+      .inputBtn:not(:disabled):not(.disabled):active, .inputBtn:not(:disabled):not(.disabled).active,
+      .show > .inputBtn.dropdown-toggle {
+        color: #fff;
+        background-color: $textColor;
+        border-color: $textColor;
+      }
+      
+      .inputBtn:not(:disabled):not(.disabled):active:focus, .inputBtn:not(:disabled):not(.disabled).active:focus,
+      .show > .inputBtn.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem $textColor;
+      }
+}

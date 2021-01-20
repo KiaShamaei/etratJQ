@@ -1,7 +1,115 @@
+.input ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(188, 199, 191, 0.61);
+  opacity: 1;
+  /* Firefox */
+}
+
+.input :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(188, 199, 191, 0.61);
+  opacity: 1;
+  /* Firefox */
+}
+
+.input ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(188, 199, 191, 0.61);
+  opacity: 1;
+  /* Firefox */
+}
+
+.input ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(188, 199, 191, 0.61);
+  opacity: 1;
+  /* Firefox */
+}
+
+.input :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(188, 199, 191, 0.61);
+}
+
+.input ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(188, 199, 191, 0.61);
+}
+
+.input .inputBox {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(188, 199, 191, 0.61);
+  background-color: #115a23;
+  border-width: 0px;
+  border: none;
+  border-bottom: 1px solid rgba(188, 199, 191, 0.61);
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.input .inputBtn {
+  color: rgba(226, 228, 226, 0.61);
+  background-color: transparent;
+  background-image: none;
+  border-color: rgba(188, 199, 191, 0.61);
+  height: 3.7rem;
+  border-radius: 5px;
+}
+
+.input .inputBtn:hover {
+  color: #fff;
+  background-color: rgba(188, 199, 191, 0.61);
+  border-color: #115a23;
+}
+
+.input .inputBtn:focus, .input .inputBtn.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #115a23;
+          box-shadow: 0 0 0 0.2rem #115a23;
+}
+
+.input .inputBtn.disabled, .input .inputBtn:disabled {
+  color: rgba(173, 173, 173, 0.61);
+  background-color: transparent;
+}
+
+.input .inputBtn:not(:disabled):not(.disabled):active, .input .inputBtn:not(:disabled):not(.disabled).active,
+.input .show > .inputBtn.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(188, 199, 191, 0.61);
+  border-color: rgba(188, 199, 191, 0.61);
+}
+
+.input .inputBtn:not(:disabled):not(.disabled):active:focus, .input .inputBtn:not(:disabled):not(.disabled).active:focus,
+.input .show > .inputBtn.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(188, 199, 191, 0.61);
+          box-shadow: 0 0 0 0.2rem rgba(188, 199, 191, 0.61);
+}
+
 body {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
+  height: 100vh;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Yekan';
+}
+
+.main {
+  background-color: #115a23;
+  color: rgba(188, 199, 191, 0.61);
+  height: 100vh;
+}
+
+.imgLogo {
+  width: 100px;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */

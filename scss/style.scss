@@ -1,6 +1,26 @@
+@import "variable";
+@import "input";
+
+
 body{
     padding : 0 ;
     margin: 0;
     list-style:none;
     text-decoration: none;
+    height: 100vh;
+    direction: rtl;
+    text-align: right;
+    font-family: 'Yekan';
+}
+
+.main {
+    background-color:$bgcolor;
+    color: $textColor;
+    height: 100vh;
+
+}
+.imgLogo {
+    width: 100px;
+    height: 100px;
+
 }
