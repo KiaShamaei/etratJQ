@@ -22,23 +22,25 @@
     background-color:$bgcolor;
     border-width:0px;
     border:none;
-    border-bottom: 1px solid $textColor;
+    border-bottom: 2px solid $textColor;
     // border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   
    }
+   .inputBox:focus { outline: none; }
     .inputBtn {
         color: $btnText;
         background-color: transparent;
         background-image: none;
         border-color: $textColor;
         height: 3.7rem;
-        border-radius: 5px;
+        border-radius: 10px;
       }
       
       .inputBtn:hover {
         color: #fff;
         background-color: $textColor;
-        border-color: $bgcolor;
+        // border-color: $bgcolor;
       }
       
       .inputBtn:focus, .inputBtn.focus {
@@ -60,5 +62,8 @@
       .inputBtn:not(:disabled):not(.disabled):active:focus, .inputBtn:not(:disabled):not(.disabled).active:focus,
       .show > .inputBtn.dropdown-toggle:focus {
         box-shadow: 0 0 0 0.2rem $textColor;
+      }
+      hr {
+        color: $textColor;
       }
 }

@@ -46,11 +46,15 @@
   background-color: #115a23;
   border-width: 0px;
   border: none;
-  border-bottom: 1px solid rgba(188, 199, 191, 0.61);
+  border-bottom: 2px solid rgba(188, 199, 191, 0.61);
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.input .inputBox:focus {
+  outline: none;
 }
 
 .input .inputBtn {
@@ -59,13 +63,12 @@
   background-image: none;
   border-color: rgba(188, 199, 191, 0.61);
   height: 3.7rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .input .inputBtn:hover {
   color: #fff;
   background-color: rgba(188, 199, 191, 0.61);
-  border-color: #115a23;
 }
 
 .input .inputBtn:focus, .input .inputBtn.focus {
@@ -91,15 +94,21 @@
           box-shadow: 0 0 0 0.2rem rgba(188, 199, 191, 0.61);
 }
 
+.input hr {
+  color: rgba(188, 199, 191, 0.61);
+}
+
 body {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
-  height: 100vh;
+  min-height: 100%;
   direction: rtl;
   text-align: right;
   font-family: 'Yekan';
+  background-color: #115a23;
+  color: rgba(188, 199, 191, 0.61);
 }
 
 .main {
@@ -111,5 +120,9 @@ body {
 .imgLogo {
   width: 100px;
   height: 100px;
+}
+
+.hrColor {
+  border-bottom: 1px solid rgba(188, 199, 191, 0.61);
 }
 /*# sourceMappingURL=style.css.map */

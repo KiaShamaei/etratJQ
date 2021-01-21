@@ -22,17 +22,17 @@
 <main class="container-fluid main">
 <div class="row justify-content-center align-item-center text-center">
     <div class="col-md-5 mt-md-5 col-8">
-        <img src="./assets/Capture.PNG" alt="">
-        <h2 class="mt-5 text-white h3">عترت خانه سادات است </h2>
-        <form class="input mt-md-5">
+        <img src="./assets/Captures.PNG" alt="">
+        <!-- <h2 class="mt-5 text-white h3">عترت خانه سادات است </h2> -->
+        <form class="input mt-md-5" id="loginForm" autocomplete="off">
             <div class="form-group">
              
-              <input type="text" class="inputBox" id="userName" placeholder="کلمه عبور">
+              <input type="text" class="inputBox" id="userName" name="userName" placeholder="کلمه عبور">
               
             </div>
             <div class="form-group">
               
-              <input type="password" class="inputBox" id="password" placeholder="رمز ورود">
+              <input type="password" class="inputBox" id="password" name="userPassword" placeholder="رمز ورود">
             </div>
             <div class="row mt-5">
                 <div class="col-md-6">
@@ -69,6 +69,8 @@
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
+<script src="./js/login.js"></script>
 </body>
 
 </html>
