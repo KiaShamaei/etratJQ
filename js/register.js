@@ -6,6 +6,7 @@ $(document).ready(function(){
         //   const inputData = {
         //     "phone-number" : userMobile 
         //      } ;
+             localStorage.setItem ('userMobile' , userMobile)
              getData(userMobile);    
         });
 //move after set loacalstorage   

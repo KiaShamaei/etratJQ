@@ -38,6 +38,9 @@ $(document).ready(function(){
            })
         }
 })
+ $('#guest').on('click' , function(){
+   window.location.replace ('/register.html')
+ })
 
 // Wait for the DOM to be ready
 $(function() {

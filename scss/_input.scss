@@ -66,4 +66,22 @@
       hr {
         color: $textColor;
       }
+
+      .inputOTP{
+        width :15%;
+        height: 6rem;
+        margin: 10px;
+        color: whitesmoke;
+        border-radius: 5px;
+        text-align: center;
+        background-color:$textColor;
+        border-width:0px;
+        border:none;
+        font-size: 50px;
+        font-family: 'Yekan';
+
+      }
+      .otppart{
+        direction: ltr;
+      }
 }

@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/font-awesome.css" rel="stylesheet">
+    <Link href="./css/ie.css" rel="stylesheet" >
+    <link href="./css/persianFont.css" rel="stylesheet ">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="./mainstyle/style.css">
 </head>
 <body>
-    <H1>veryfi code page </H1>
-</body>
+    <main class="container-fluid main">
+    <div class="row justify-content-center align-item-center text-center">
+        <div class="col-md-5 mt-md-5 col-8">
+            <img src="./assets/Captures.PNG" alt="">
+            <!-- <h2 class="mt-5 text-white h3">از طریق شمارخه موبایل خو پیامک امنیتی را دریافت کنید همچنین با وارد کردن شماره تلفن ثابت ، کد را از تماس صوتی دریافت کنید </h2> -->
+            <form class="input mt-md-5" id="veriFyForm" autocomplete="off">
+                <div class="form-group otppart">
+                 
+                  <input type="text" tabindex="1" maxlength="1"  name="otp" class="inputOTP" id="otp1">
+                  <input type="text" tabindex="2" maxlength="1" name="otp1" class="inputOTP" id="otp2">
+                  <input type="text" tabindex="3" maxlength="1" name="otp2" class="inputOTP" id="otp3">
+                  <input type="text" tabindex="4" maxlength="1" name="otp3" class="inputOTP" id="otp4">
+                  
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12 text-right">
+                        <p class="my-md-3">کد را دریافت نکرده اید ؟<a class="text-white" href="#"> ارسال مجدد </a></p>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="inputBtn btn-block mt-2">ارسال</button>
+                    </div>
+                    
+                    
+                </div>
+                
+              </form>
+    
+        </div>
+    </div>
+    </main>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/verifyCode.js"></script>
+    </body>
 </html>
