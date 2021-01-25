@@ -16,10 +16,10 @@
     <main class="container-fluid main">
     <div class="row justify-content-center align-item-center text-center">
         <div class="col-md-5 mt-md-5 col-8">
-            <img src="./assets/Captures.PNG" alt="">
-            <!-- <h2 class="mt-5 text-white h3">از طریق شمارخه موبایل خو پیامک امنیتی را دریافت کنید همچنین با وارد کردن شماره تلفن ثابت ، کد را از تماس صوتی دریافت کنید </h2> -->
-            <form class="input mt-md-5" id="veriFyForm" autocomplete="off">
-                <div class="form-group otppart">
+            <img src="./assets/Icon/Group171.png" alt="">
+            <h2 class="mt-5 text-white ">کد دریافتی را در بخشش زیر وارد کنید . </h2>
+            <form class="input mt-md-5" id="veriFyForm" name="veriFyForm" autocomplete="off">
+                <div class="form-group otppart" id="otppart">
                  
                   <input type="text" tabindex="1" maxlength="1"  name="otp" class="inputOTP" id="otp1">
                   <input type="text" tabindex="2" maxlength="1" name="otp1" class="inputOTP" id="otp2">
@@ -28,11 +28,14 @@
                   
                 </div>
                 <div class="row mt-5">
-                    <div class="col-md-12 text-right">
-                        <p class="my-md-3">کد را دریافت نکرده اید ؟<a class="text-white" href="#"> ارسال مجدد </a></p>
+                    <div class="col-md-6 text-right">
+                        <p class="my-md-3">کد را دریافت نکرده اید ؟<span class="text-white" id="resend" > ارسال مجدد </span></p>
+                    </div>
+                    <div class="col-md-6 text-left">
+                      <div class="my-md-3">زمان باقی مانده <span id="timer" class="text-white"></span></div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="inputBtn btn-block mt-2">ارسال</button>
+                        <button type="submit" class="inputBtn btn-block mt-2" id="submitBtn" >ارسال</button>
                     </div>
                     
                     

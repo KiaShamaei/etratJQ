@@ -17,10 +17,80 @@ body{
 
 
 .main {
-    background-color:$bgcolor;
+    background-color:$bgcolor url('../assets/Background/MaskGroup5.png')url('../assets/Background/MaskGroup6.png');
     color: $textColor;
     height: 100vh;
 
+}
+.main2{
+    box-sizing: border-box;
+    background-color:$bgcolor;
+    color: $textColor;
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+   
+    .service {
+        background-color: whitesmoke;
+        width: 60%;
+        height: 5rem;
+        border-radius: 5px;
+        padding: 3px;
+        margin:10px 20px ;
+        cursor: pointer;
+        box-shadow: 0 0 0 0.2rem $bgcolor;
+        font-size: 1.7rem;
+        position: relative;
+        .icon{
+            width: 4rem;
+            height: 4rem;
+            
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            border-radius: 5px;
+            img{
+                position: absolute;
+                top: 17px;
+                left: 10px;
+            }
+            
+        }
+        .iconColory{
+            background-color: $servColor1;
+        }
+        .iconColorb{
+            background-color: $servColor2;
+        }
+        .iconColorp{
+            background-color: $servColor3;
+        }
+        .iconColorr{
+            background-color: $servColor4;
+        }
+    }
+
+    
+}
+.layer {
+    background-image: url('../assets/Background/MaskGroup5.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.layer2 {
+    background-image: url('../assets/Background/MaskGroup6@2x.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -0;
+    left: 1100px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .imgLogo {
     width: 100px;

@@ -2,3 +2,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,blockquote,big,body,center,c
 *{
     box-sizing: border-box;
 }
+.clearfix:after { 
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+ }

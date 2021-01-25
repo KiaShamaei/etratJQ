@@ -116,6 +116,11 @@
   direction: ltr;
 }
 
+.input #resend {
+  cursor: pointer;
+  margin: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -130,9 +135,86 @@ body {
 }
 
 .main {
+  background-color: #115a23 url("../assets/Background/MaskGroup5.png") url("../assets/Background/MaskGroup6.png");
+  color: rgba(188, 199, 191, 0.61);
+  height: 100vh;
+}
+
+.main2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #115a23;
   color: rgba(188, 199, 191, 0.61);
   height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+
+.main2 .service {
+  background-color: whitesmoke;
+  width: 60%;
+  height: 5rem;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 10px 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 0.2rem #115a23;
+          box-shadow: 0 0 0 0.2rem #115a23;
+  font-size: 1.7rem;
+  position: relative;
+}
+
+.main2 .service .icon {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+.main2 .service .icon img {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+}
+
+.main2 .service .iconColory {
+  background-color: #ebc20b;
+}
+
+.main2 .service .iconColorb {
+  background-color: #33aafa;
+}
+
+.main2 .service .iconColorp {
+  background-color: #be0beb;
+}
+
+.main2 .service .iconColorr {
+  background-color: #eb0b43;
+}
+
+.layer {
+  background-image: url("../assets/Background/MaskGroup5.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.layer2 {
+  background-image: url("../assets/Background/MaskGroup6@2x.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -0;
+  left: 1100px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .imgLogo {

@@ -1,82 +1,131 @@
 $(document).ready(function () {
-    
-    const getData =function(userMobile,otp){
-        $.ajax ({
-            
-          type : 'GET',
-          url : "http://payment.etrat-fatemi.com:8080/api/verify?otp="+otp+"&phone-number="+userMobile,
-           Authorization : "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
-           accept :"*/*",
-          success : function(){
-              debugger;
-            window.location.replace("/services.html")
-          },
-          error : function(err){
-            if(err.status != 200 ){
-              alert ( 'پسورد یا نام کاربری شما درست نیست ')
-            }
-          }
-      
-        })
-     }
+  //timer for otp valid
+  var timerOn = true;
 
-    $('#veriFyForm').on('submit', function (e) {
-        debugger;
-        e.preventDefault();
-        const otp1 = $('#otp1').val();
-        const otp2 = $('#otp2').val();
-        const otp3 = $('#otp3').val();
-        const otp4 = $('#otp4').val();
-        const otp = otp1 + otp2 + otp3 + otp4;
-        const userMObile = localStorage.getItem('userMobile')
-        getData(userMObile,otp);
-        
+  function timer(remaining) {
+    var m = Math.floor(remaining / 60);
+    var s = remaining % 60;
+
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+    document.getElementById('timer').innerHTML = m + ':' + s;
+    remaining -= 1;
+
+    if (remaining >= 0 && timerOn) {
+      setTimeout(function () {
+        timer(remaining);
+      }, 1000);
+
+      return;
+    }
+    timerOn = false;
+    if (!timerOn) {
+      $('#submitBtn').attr('disabled', 'disabled')
+      timerOn = false
+      return;
+    }
+
+    // Do timeout stuff here
+    $('#submitBtn').removeAttr("disabled");
+  }
+
+  timer(60);
+
+  //resend process ------------->
+  const userMObile = localStorage.getItem('userMobile')
+  const RegetData = function (userMobile) {
+    $.ajax({
+
+      type: 'GET',
+      url: "http://payment.etrat-fatemi.com:8080/api/send-otp?phone-number=" + userMobile,
+      Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
+      accept: "*/*",
+      success: function () {
+
+      },
+      error: function (err) {
+        if (err.status != 200) {
+          alert('پسورد یا نام کاربری شما درست نیست ')
+        }
+      }
+
     })
+  }
+  $('#resend').on('click', function () {
 
-    $(function() {
-        // Initialize form validation on the registration form.
-        // It has the name attribute "registration"
-        $("#veriFyForm").validate({
-          // Specify validation rules
-          rules: {
-            // The key name on the left side is the name attribute
-            // of an input field. Validation rules are defined
-            // on the right side
-            otp :{
-              required: true,
-              maxlength: 1,
-              digits: true
-            },
-            otp1 :{
-                required: true,
-                maxlength: 1,
-                digits: true
+    timerOn = true;
+    timer(60);
+    $('#submitBtn').removeAttr("disabled");
+    RegetData(userMObile);
 
-              },
-            otp2 :{
-                required: true,
-                maxlength: 1,
-                digits: true
-              },
-            otp3 :{
-                required: true,
-                maxlength: 1,
-                digits: true
-              }
+  })
 
-          },
-          // Specify validation error messages
-          messages: {
-              otp: "لطفا شماره را درست وارد کنید  ",
-          },
-          // Make sure the form is submitted to the destination defined
-          // in the "action" attribute of the form when valid
-          // submitHandler: function(form) {
-          //   form.submit();
-          // }
-          
-        });
-      });
+
+
+  //end resen process 
+
+  const getData = function (userMobile, otp) {
+    $.ajax({
+
+      type: 'GET',
+      url: "http://payment.etrat-fatemi.com:8080/api/verify?otp=" + otp + "&phone-number=" + userMobile,
+      Authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
+      accept: "*/*",
+      success: function () {
+        debugger;
+        window.location.replace("/services.html")
+      },
+      error: function (err) {
+        if (err.status != 200) {
+          alert('پسورد یا نام کاربری شما درست نیست ')
+        }
+      }
+
+    })
+  }
+  // change input after enter value smoothly 
+  //  $("#otp1").keyup( function(){
+  //    $(this).next().focus() ;
+  //  })
+  const otplist = $('.inputOTP');
+  for (let i = 0; i < otplist.length; i++) {
+    otplist[i].addEventListener('keyup', function () {
+      $(this).next().focus();
+    })
+  }
+
+  $('#veriFyForm').on('submit', function (e) {
+    debugger;
+    e.preventDefault();
+    const otp1 = $('#otp1').val();
+    const otp2 = $('#otp2').val();
+    const otp3 = $('#otp3').val();
+    const otp4 = $('#otp4').val();
+    const otp = otp1 + otp2 + otp3 + otp4;
+    if (Validcode(otp)) {
+      const userMObile = localStorage.getItem('userMobile')
+      getData(userMObile, otp);
+    } else {
+      $("#otp1").focus()
+    }
+
+  })
+
+
+  function Validcode(inputText) {
+
+    var otpFormat = /^\d{4}$/;
+    if (inputText.match(otpFormat)) {
+      return true;
+    }
+    else {
+      alert("لطفا فقط عدد وارد کنید ");
+      var input = $('#otppart');
+      input.focus();
+      input.select()
+      return false;
+    }
+  }
 
 
 

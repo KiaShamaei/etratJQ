@@ -20,7 +20,7 @@
   --gray-dark: #343a40;
   --primary: #007bff;
   --secondary: #6c757d;
-  --success: #28a745;
+  --success: #1ae64a;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
@@ -2575,7 +2575,7 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
+  background-color: #0edd3e;
   border-color: #28a745;
 }
 
