@@ -9,10 +9,14 @@ var ss="Bearer"+" "+localStorage.getItem('id_token');
 
           type: 'GET',
            url: "http://payment.etrat-fatemi.com:8080/api/transactions/code?amount=1000&type-id=09",
+          headers :{
           accept: "*/*",
           Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
+          },
           
           success: function (data) {
+            localStorage.setItem('token',data.token);
+            window.open("http://payment.etrat-fatemi.com:8080/gateway/payment?code="+data.token)
     
           },
           error: function (err) {
