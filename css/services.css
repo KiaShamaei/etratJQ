@@ -14,7 +14,7 @@ body {
 }
 
 .enterPrice {
-  position: relative;
+  direction: rtl;
   border-radius: 5px;
   padding: 25px;
   text-align: center;
@@ -23,14 +23,14 @@ body {
           box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
 }
 
-.enterPrice input {
-  float: left;
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #B3B3B3 #dcddde #dcddde #B3B3B3;
+.enterPrice .priceInput {
+  border: 0;
+  background-color: whitesmoke;
+  font-size: 3rem;
+}
+
+.enterPrice .priceInput :focus {
+  outline: none !important;
 }
 
 .price {
@@ -61,5 +61,9 @@ body {
           align-items: center;
   font-size: 48px;
   color: whitesmoke;
+}
+
+*:focus {
+  outline: none;
 }
 /*# sourceMappingURL=services.css.map */

@@ -14,7 +14,9 @@ body{
     background-color:$bgcolor;
     color: $textColor;
 }
-
+*:focus {
+    outline: none;
+}
 
 .main {
     background-color:$bgcolor url('../assets/Background/MaskGroup5.png')url('../assets/Background/MaskGroup6.png');

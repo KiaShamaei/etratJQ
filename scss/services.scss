@@ -14,23 +14,21 @@ body{
     font-family: 'Yekan';
 }
 .enterPrice{
-    position: relative;
+    direction: rtl;
     border-radius: 5px;
     padding: 25px;
     text-align: center;
     background-color: whitesmoke;
     box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
-    input{
-        float: left;
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #B3B3B3 #dcddde #dcddde #B3B3B3;
-        
-        
+    .priceInput{
+        border: 0;
+        background-color: whitesmoke;
+        font-size: 3rem;
+        :focus {
+            outline: none !important;
+        }
     }
+   
 }
 .price{
     border-radius: 8px;
@@ -52,4 +50,7 @@ body{
     font-size: 48px;
     color: whitesmoke;
 
+}
+*:focus {
+    outline: none;
 }

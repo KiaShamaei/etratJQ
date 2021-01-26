@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>services</title>
+    <title>صدقات </title>
     <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/font-awesome.css" rel="stylesheet">
     <Link href="./css/ie.css" rel="stylesheet" >
     <link href="./css/persianFont.css" rel="stylesheet ">
     <link href="./css/reset.css" rel="stylesheet">
-    <link rel="stylesheet" href="./mainstyle/services.css">
+    <link rel="stylesheet" href="./css/services.css">
     <link href="" rel="">
 </head>
 <body>
@@ -20,39 +20,51 @@
                <div class="row mt-5 p-3 justify-content-center align-item-center ">
                    <div class="col-md-8 text-right mt-5 p-5">
                        <p class="my-5">لطفا مبلغ خود را وارد کنید </p>
-                       <div class="enterPrice clearfix p-3 ">
-                        <p class="text-center">10000000</p>
-                        <input type="checkbox" name="enterPriceCheck" id="enterPriceCheck">
-                       </div>
+                       <span id="errmsg" class="text-danger"></span>
+                      <div class="enterPrice">
+                        <form>
+                            <div class="form-row align-items-center ">
+                              <div class="col-10">
+                                <input type="text" class=" mb-2 priceInput text-center" id="priceTotal" autocomplete="off" >
+                                
+                              </div>
+                              <div class="col-2 mt-2">
+                                <img src="./assets/Icon/check(1).png" alt="">
+                              </div>
+                              
+                            </div>
+                          </form>
+                 
+                      </div>
                        <div class="row mt-5 p-3 justify-content-center align-item-center">
-                           <div class="col-md-3 price p-5 m-2">
-                               <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2" id="1">
+                               <p>10,000</p>
                                <p>ریال</p>
                            </div>
-                           <div class="col-md-3 price p-5 m-2">
-                            <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2" id="2">
+                            <p>20,000</p>
                             <p>ریال</p>
                            </div>
-                           <div class="col-md-3 price p-5 m-2">
-                            <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2"  id="3">
+                            <p>30,000</p>
                             <p>ریال</p>
                            </div>
-                           <div class="col-md-3 price p-5 m-2">
-                            <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2" id="4">
+                            <p>40,000</p>
                             <p>ریال</p>
                            </div>
-                           <div class="col-md-3 price p-5 m-2">
-                            <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2" id="5">
+                            <p>50,000</p>
                             <p>ریال</p>
                            </div>
-                           <div class="col-md-3 price p-5 m-2">
-                            <p>50000</p>
+                           <div class="col-md-3 price p-5 m-2" id="6">
+                            <p>60,000</p>
                             <p>ریال</p>
                            </div>
                        </div>
                        <div class="row mt-5 p-3 justify-content-center align-item-center">
                            <div class="col-12 fontSize">
-                               <button class="btn btn-block btn-success fontSize " >پرداخت</button>
+                               <button class="btn btn-block btn-success fontSize " id="payment" >پرداخت</button>
                            </div>
                        </div>
                    </div>
@@ -69,7 +81,7 @@
                 </div>
                 <div class="row mainpayment mt-3">
                     <div class="col-12">
-                        <p class="text-center"> 10000000</p>
+                        <p class="text-center" id="mainPrice"></p>
                         <p class="text-center"> ریال</p>
                     </div>
                 </div>
@@ -88,6 +100,7 @@
                     </div>
                     <div class="col-md-3">
                         <p class="text-center"> 10000000</p>
+                       
 
                     </div>
                 </div>   
@@ -101,6 +114,7 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/sadaghe.js"></script>
 
     </body>
 </html>

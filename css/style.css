@@ -134,6 +134,10 @@ body {
   color: rgba(188, 199, 191, 0.61);
 }
 
+*:focus {
+  outline: none;
+}
+
 .main {
   background-color: #115a23 url("../assets/Background/MaskGroup5.png") url("../assets/Background/MaskGroup6.png");
   color: rgba(188, 199, 191, 0.61);
