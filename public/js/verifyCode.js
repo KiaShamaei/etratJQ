@@ -29,7 +29,7 @@ $(document).ready(function () {
     $('#submitBtn').removeAttr("disabled");
   }
 
-  timer(60);
+  timer(180);
 
   //resend process ------------->
   const userMObile = localStorage.getItem('userMobile')
@@ -56,7 +56,7 @@ $(document).ready(function () {
   $('#resend').on('click', function () {
 
     timerOn = true;
-    timer(60);
+    timer(180);
     $('#submitBtn').removeAttr("disabled");
     RegetData(userMObile);
 
@@ -78,7 +78,7 @@ $(document).ready(function () {
       success: function (data) {
         debugger;
         localStorage.setItem("id_token",data.id_token)
-        window.location.replace("/services.html")
+        window.location.replace("./mainIcon.html")
       },
       error: function (err) {
         if (err.status != 200) {

@@ -1,0 +1,160 @@
+body {
+  font-family: 'Yekan';
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+a:hover {
+  color: #6bc987;
+  text-decoration: none;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+
+.serv {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px 0 0 20px;
+  color: whitesmoke;
+  font-family: 'Yekan';
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 780px) {
+  .serv {
+    background-size: cover;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50vh;
+  }
+}
+
+.servSadaghe {
+  background-image: url("../assets/Background/Group596.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.servNazr {
+  background-image: url("../assets/Background/Group595.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.servSharee {
+  background-image: url("../assets/Background/Group597.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.servSharee {
+  background-image: url("../assets/Background/Group598.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.enterPrice {
+  direction: rtl;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+          box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+}
+
+.enterPrice .priceInput {
+  border: 0;
+  background-color: #fdfdfd;
+  font-size: 3rem;
+}
+
+.enterPrice .priceInput :focus {
+  outline: none !important;
+}
+
+.price {
+  border-radius: 10px;
+  font-size: 26px;
+  color: #115a23;
+  padding: 7px;
+  text-align: center;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+          box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+  cursor: pointer;
+}
+
+.setIcon {
+  position: relative;
+}
+
+.setIcon .seticonuser {
+  position: absolute;
+  top: 5px;
+  left: 97px;
+}
+
+.serpayment {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.serpayment:hover {
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+
+.fontSize {
+  font-size: 24px;
+}
+
+.mainpayment {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 9;
+      -ms-flex-positive: 9;
+          flex-grow: 9;
+}
+
+*:focus {
+  outline: none;
+}
+
+.btnpayment {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btnpayment .btnpayment:hover {
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+/*# sourceMappingURL=services.css.map */

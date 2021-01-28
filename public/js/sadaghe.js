@@ -1,17 +1,19 @@
 $(document).ready(function(){
 debugger;
 
-var ss="Bearer"+" "+localStorage.getItem('id_token');
+const ss="Bearer"+" "+localStorage.getItem('id_token');
+
+//payment get data ===============================
     const getData = function (amount , typeid) {
       
          
         $.ajax({
 
           type: 'GET',
-           url: "http://payment.etrat-fatemi.com:8080/api/transactions/code?amount=1000&type-id=09",
+           url: "http://payment.etrat-fatemi.com:8080/api/transactions/code?amount="+amount+"&type-id="+typeid,
           headers :{
           accept: "*/*",
-          Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
+          Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
           },
           
           success: function (data) {
@@ -28,6 +30,31 @@ var ss="Bearer"+" "+localStorage.getItem('id_token');
     
         })
       }
+//get admin data 
+const getadminData = function () {
+      
+         
+  $.ajax({
+
+    type: 'GET',
+     url: "http://payment.etrat-fatemi.com:8080/api/account",
+    headers :{
+    accept: "*/*",
+    Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+    },
+  // enter user name in dom   
+    success: function (data) {
+      $('#username').html(data.firstName +" " +data.lastName);
+      $('#userdoc').html(data.email)
+
+    },
+    error: function (err) {
+      window.location.replace('./login.html')
+     
+    }
+
+  })
+}
 
 
 //get token
@@ -38,7 +65,7 @@ const payment= $('#payment') ;
 payment.click(function(){
 let price = $('#priceTotal').val();
 price=parseInt(price);
-getData("10000", 14);
+getData("price", 14);
 })
 
 
@@ -52,7 +79,7 @@ const listPrice = document.querySelectorAll(".price");
 listPrice.forEach(function(item){
     
     item.addEventListener('click', function(){
-     
+		console.log(this)
         let priceValue = this.childNodes[1].innerHTML;
         $('#priceTotal').val(priceValue);
         $('#mainPrice').html(priceValue);
@@ -83,6 +110,17 @@ $("#priceTotal").keypress(function (e) {
     $('#priceTotal').val(f);
     $('#mainPrice').html(f);
   })
+  //info of person login 
+  if (localStorage.getItem("token_id")){
+    getadminData();
 
+  }
+
+  //info show date 
+  let today = new Date().toLocaleDateString('fa-IR');
+  let dateToday = "تاریخ : " + today ;
+  $("#persiandate").html(dateToday);
 
 })
+
+

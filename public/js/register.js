@@ -11,7 +11,7 @@ $(document).ready(function(){
         });
 //move after set loacalstorage   
         const handleData = function(){
-        window.location.replace("/verifycode.html");
+        window.location.replace("./verifycode.html");
         }
         var datares ;
         const getData =function(userMobile){

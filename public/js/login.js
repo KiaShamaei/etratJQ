@@ -13,8 +13,9 @@ $(document).ready(function(){
         });
 //move after set loacalstorage   
         const handleData = function(res){
-          localStorage.setItem({token : res.id-token})
-          window.location.replace('')
+          debugger;
+          localStorage.setItem("token_id" , res.id_token)
+          window.location.replace('./mainIcon.html')
         }
         var datares ;
         const getData =function(inputData){
@@ -23,8 +24,10 @@ $(document).ready(function(){
              url : "http://payment.etrat-fatemi.com:8080/api/authenticate",
              contentType : 'application/json',
               data:JSON.stringify(inputData),
-              Authorization : "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
-              accept :"*/*",
+              headers:{
+                Authorization : "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
+                accept :"*/*",
+              },
              dataType: 'json',
              success : function(datares){
                handleData(datares);
@@ -39,7 +42,7 @@ $(document).ready(function(){
         }
 })
  $('#guest').on('click' , function(){
-   window.location.replace ('/register.html')
+   window.location.replace ('./register.html')
  })
 
 // Wait for the DOM to be ready

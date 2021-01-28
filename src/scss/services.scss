@@ -1,0 +1,121 @@
+@import "./variable";
+
+body{
+	font-family: 'Yekan';
+	font-size: 18px;
+	@media only screen and (max-width: 780px) {
+		font-size: 20px;
+	}
+}
+a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #fdfdfd;
+   
+}
+a:hover{
+    color: rgb(107, 201, 135);
+    text-decoration: none;
+    transform: translate(0, -10px);
+}
+.serv{
+
+justify-content: center;
+border-radius: 20px 0 0 20px;
+color: whitesmoke;
+font-family: 'Yekan';
+width: 100%;
+display: flex;
+flex-direction: column;
+align-content: space-between;
+height: 100vh;
+@media only screen and (max-width: 780px) {
+	background-size: cover;
+    justify-content: center;
+    height: 50vh;
+}
+}
+.servSadaghe{
+    background-image: url("../assets/Background/Group596.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servNazr{
+    background-image: url("../assets/Background/Group595.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servSharee{
+    background-image: url("../assets/Background/Group597.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servSharee{
+    background-image: url("../assets/Background/Group598.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.enterPrice{
+    direction: rtl;
+    border-radius: 5px;
+    // padding: 5px;
+    text-align: center;
+    background-color: #fdfdfd;
+    box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+    .priceInput{
+        border: 0;
+        background-color: #fdfdfd;
+        font-size: 3rem;
+        :focus {
+            outline: none !important;
+        }
+    }
+   
+}
+.price{
+    border-radius: 10px;
+    font-size: 26px;
+    color: $bgcolor;
+    padding: 7px;
+    text-align: center;  
+    background-color: #fdfdfd;
+    box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
+	cursor: pointer;
+
+}
+.setIcon{
+	position: relative;
+	.seticonuser{
+		position:absolute;
+		top:5px;
+		left:97px;
+	}
+}
+.serpayment {
+	transition: 0.3s;
+  }
+  .serpayment:hover {
+	transform: translate(0, -10px);
+  }
+
+.fontSize {
+    font-size: 24px;
+}
+.mainpayment{
+    justify-content: center;
+    align-items: center;
+	flex-grow: 9
+
+}
+*:focus {
+	outline: none;
+	
+}
+.btnpayment{
+    transition: 0.3s;
+
+.btnpayment:hover {
+  transform: translate(0, -10px);
+}
+
+}

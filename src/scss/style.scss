@@ -1,0 +1,118 @@
+@import "variable";
+@import "input";
+
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  min-height: 100%;
+  direction: rtl;
+  text-align: right;
+  font-family: "Yekan";
+  background-color: $bgcolor;
+  background-image: 
+  url(../../public/assets/Background/MaskGroup5.png),
+  url(../../public/assets/Background/MaskGroup6.png);
+  ;
+  background-repeat:
+  no-repeat,
+  no-repeat;
+  background-position: top left,
+  bottom right;
+  background-size: 30%;
+  color: $textColor;
+  font-size: 1.5rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 780px) {
+    font-size: 16px;
+  }
+}
+*:focus {
+  outline: none;
+}
+
+.main {
+  background-image: 
+  
+    url(../../public/assets/Background/Group5.png),
+    url(../../public/assets/Background/Group6.png);
+	;
+	background-repeat:
+	no-repeat,
+	no-repeat;
+	background-position: bottom right,
+	left,
+	right;
+	background-size: 30%;
+
+  color: $textColor;
+  height: 100vh;
+  box-sizing: border-box;
+//   background-color: $bgcolor;
+  color: $textColor;
+  height: 100vh;
+}
+.main2 {
+	margin:0;
+  box-sizing: border-box;
+  color: $textColor;
+  
+  position: relative;
+ 
+//main services style 
+  .service {
+    background-color: whitesmoke;
+    width: 60%;
+    height: 5rem;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0.2rem $bgcolor;
+	position: relative;
+	:hover{
+		color: #fff;
+		text-decoration: none;
+		transition: all 5ms;
+		padding: 4px;
+	}
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      border-radius: 5px;
+      img {
+        position: absolute;
+        top: 17px;
+        left: 10px;
+      }
+    }
+    .iconColory {
+      background-color: $servColor1;
+    }
+    .iconColorb {
+      background-color: $servColor2;
+    }
+    .iconColorp {
+      background-color: $servColor3;
+    }
+    .iconColorr {
+      background-color: $servColor4;
+    }
+  }
+}
+
+.imgLogo {
+  width: 100px;
+  height: 100px;
+}
+.hrColor {
+  border-bottom: 1px solid $textColor;
+}
