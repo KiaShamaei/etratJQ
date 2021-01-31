@@ -2,8 +2,11 @@ $(document).ready(function(){
 
 
     const ss="Bearer"+" "+localStorage.getItem('id_token');
-//payment get data ===============================
- const getData = function (amount , typeid) {    
+    
+    //payment get data ===============================
+        const getData = function (amount , typeid) {
+          
+             
             $.ajax({
     
               type: 'GET',
@@ -103,22 +106,20 @@ $(document).ready(function(){
       let today = new Date().toLocaleDateString('fa-IR');
       let dateToday = "تاریخ : " + today ;
       $("#persiandate").html(dateToday);
-      //do sadaghe
+      //do sharee
       const payment= $('#payment') ;
       
       
       payment.click(function(){
-      
+      debugger;
       let price = $('#priceTotal').val();
       price=price.replace(",", '')
-      getData(price, 14);
+      getData(price, 15);
       })
     
     })
     
     
     
-
-
 
 

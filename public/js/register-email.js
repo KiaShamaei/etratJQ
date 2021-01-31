@@ -1,7 +1,7 @@
 $(document).ready(function(){
    
     $("#RegisterForm").on('submit',function(e){
-        debugger;
+   
           const userEmail = $("#userEmail").val() ;
           e.preventDefault();
         //   const inputData = {
@@ -15,20 +15,21 @@ $(document).ready(function(){
         }
         var datares ;
         const getData =function(userEmail){
-            debugger;
+           
            $.ajax ({
                
              type : 'GET',
-             url : "http://payment.etrat-fatemi.com:8080/api/send-otp?phone-number="+userEmail,
+             url : "https://etrat.cloud.papraco.com/api/send-otp?phone-number="+userEmail,
               Authorization : "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYxMjE2MTMzOH0.zh_c6LYlA6e1xgeIvmJNWK8WlNDl0PUvpBjqV_GPa4gNcVhgtJPw8PjxELkjop_i3IPqT5ZN4OqcaBcb5KoAQQ",
               accept :"*/*",
              success : function(){
-                 debugger;
+             
                handleData();
              },
              error : function(err){
                if(err.status != 200 ){
-                 alert ( 'پسورد یا نام کاربری شما درست نیست ')
+                 alert ( 'مشکلی رخ داده مجدد تلاش کنید');
+
                }
              }
          

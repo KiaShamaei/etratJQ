@@ -21,7 +21,7 @@ $(document).ready(function(){
         const getData =function(inputData){
            $.ajax ({
              type : 'POST',
-             url : "http://payment.etrat-fatemi.com:8080/api/authenticate",
+             url : "https://etrat.cloud.papraco.com/api/authenticate",
              contentType : 'application/json',
               data:JSON.stringify(inputData),
               headers:{
@@ -34,7 +34,8 @@ $(document).ready(function(){
              },
              error : function(err){
                if(err.status == 401 ){
-                 alert ( 'پسورد یا نام کاربری شما ')
+                 alert ( 'پسورد یا نام کاربری شما ');
+                 
                }
              }
          
