@@ -24,11 +24,12 @@ $(document).ready(function(){
               error: function (err) {
     
                 if (err.status == 401) {
-                  alert('دسترسی شما معتبر نیست ')
+                  alert('دسترسی شما معتبر نیست ');
+                  window.location.replace('./login.html');
                 }
                 else
                {
-                  alert('مشکلی پیش آمده مجدد تلاش کنید !')
+                  alert('مشکلی پیش آمده مجدد تلاش کنید !');
                 }
               }
         
