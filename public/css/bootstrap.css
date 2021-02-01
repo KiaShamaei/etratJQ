@@ -389,10 +389,12 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+  
 }
 
 h6, .h6 {
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .lead {
@@ -3856,7 +3858,7 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .nav-link:hover, .nav-link:focus {

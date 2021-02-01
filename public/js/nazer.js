@@ -13,7 +13,7 @@ $(document).ready(function(){
                url: "https://etrat.cloud.papraco.com/api/transactions/code?amount="+amount+"&type-id="+typeid,
               headers :{
               accept: "*/*",
-              Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+              Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
               },
               
               success: function (data) {
@@ -22,7 +22,7 @@ $(document).ready(function(){
         
               },
               error: function (err) {
-    
+                console.log(err.status);
                 if (err.status == 401) {
                   alert('دسترسی شما معتبر نیست ');
                   window.location.replace('./login.html');
@@ -111,10 +111,10 @@ $(document).ready(function(){
       
    //do nazer   
       payment.click(function(){
-      debugger;
+     
       let price = $('#priceTotal').val();
       price=price.replace(",", '')
-      getData(price, 09);
+      getData(price, "09");
       })
     
     })

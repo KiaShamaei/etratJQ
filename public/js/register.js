@@ -4,7 +4,6 @@ $(document).ready(function(){
     if (e.target.value.length == 11){
     const showmessage = $("#validMobile");
     const check = IsIranPhone($(this), showmessage)
-    debugger;
     if (check){
         $('#submit').removeAttr('disabled')
     }else{

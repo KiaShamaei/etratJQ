@@ -29,27 +29,36 @@
    }
    .inputBox:focus { outline: none; }
     .inputBtn {
-        color: $btnText;
-        background-color: transparent;
+    
+      color: #fdfdfd;
+      background-color: transparent;
         background-image: none;
         border-color: $textColor;
         height: 3.7rem;
         border-radius: 10px;
       }
-      
+    #btnpos{
+      position: relative;
+    }
+    #tiklogin{
+      position: absolute;
+      top: 23px;
+      left: 218px;
+    }
       .inputBtn:hover {
-        color: #fff;
-        background-color: $textColor;
+        color: $btnText;
+        background-color: transparent;
         // border-color: $bgcolor;
       }
+      
       
       .inputBtn:focus, .inputBtn.focus {
         box-shadow: 0 0 0 0.2rem $bgcolor;
       }
       
       .inputBtn.disabled, .inputBtn:disabled {
-        color: $disBtn ;
-        background-color: transparent;
+         color: #fff;
+      background-color: $textColor;
       }
       
       .inputBtn:not(:disabled):not(.disabled):active, .inputBtn:not(:disabled):not(.disabled).active,
@@ -79,6 +88,11 @@
         border:none;
         font-size: 50px;
         font-family: 'Yekan';
+        @media only screen and (max-width: 780px) {
+          width: 20%;
+          margin: 2px;
+          height: 3rem;
+        }
 
       }
       .otppart{

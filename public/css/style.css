@@ -58,7 +58,7 @@
 }
 
 .input .inputBtn {
-  color: rgba(226, 228, 226, 0.61);
+  color: #fdfdfd;
   background-color: transparent;
   background-image: none;
   border-color: rgba(188, 199, 191, 0.61);
@@ -66,9 +66,19 @@
   border-radius: 10px;
 }
 
+.input #btnpos {
+  position: relative;
+}
+
+.input #tiklogin {
+  position: absolute;
+  top: 23px;
+  left: 218px;
+}
+
 .input .inputBtn:hover {
-  color: #fff;
-  background-color: rgba(188, 199, 191, 0.61);
+  color: rgba(226, 228, 226, 0.61);
+  background-color: transparent;
 }
 
 .input .inputBtn:focus, .input .inputBtn.focus {
@@ -77,8 +87,8 @@
 }
 
 .input .inputBtn.disabled, .input .inputBtn:disabled {
-  color: rgba(173, 173, 173, 0.61);
-  background-color: transparent;
+  color: #fff;
+  background-color: rgba(188, 199, 191, 0.61);
 }
 
 .input .inputBtn:not(:disabled):not(.disabled):active, .input .inputBtn:not(:disabled):not(.disabled).active,
@@ -110,6 +120,14 @@
   border: none;
   font-size: 50px;
   font-family: 'Yekan';
+}
+
+@media only screen and (max-width: 780px) {
+  .input .inputOTP {
+    width: 20%;
+    margin: 2px;
+    height: 3rem;
+  }
 }
 
 .input .otppart {
@@ -147,7 +165,7 @@ body {
 
 @media only screen and (max-width: 780px) {
   body {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -189,6 +207,14 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 1200px) {
+  .main2 .service {
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+  }
+}
+
 .main2 .service :hover {
   color: #fff;
   text-decoration: none;
@@ -209,7 +235,7 @@ body {
 .main2 .service .icon img {
   position: absolute;
   top: 17px;
-  left: 10px;
+  left: 13px;
 }
 
 .main2 .service .iconColory {

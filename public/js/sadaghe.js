@@ -10,7 +10,7 @@ $(document).ready(function(){
                url: "https://etrat.cloud.papraco.com/api/transactions/code?amount="+amount+"&type-id="+typeid,
               headers :{
               accept: "*/*",
-              Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+              Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
               },
               
               success: function (data) {

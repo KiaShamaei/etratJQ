@@ -13,7 +13,7 @@ $(document).ready(function(){
                url: "https://etrat.cloud.papraco.com/api/transactions/code?amount="+amount+"&type-id="+typeid,
               headers :{
               accept: "*/*",
-              Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+              Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
               },
               
               success: function (data) {
@@ -112,7 +112,6 @@ $(document).ready(function(){
       
       
       payment.click(function(){
-      debugger;
       let price = $('#priceTotal').val();
       price=price.replace(",", '')
       getData(price, 15);

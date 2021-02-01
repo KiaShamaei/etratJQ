@@ -28,7 +28,7 @@ body {
   }
 
   @media only screen and (max-width: 780px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 *:focus {
@@ -73,7 +73,13 @@ body {
     margin: 10px 20px;
     cursor: pointer;
     box-shadow: 0 0 0 0.2rem $bgcolor;
-	position: relative;
+  position: relative;
+  @media only screen and (max-width: 1200px) {
+    
+    padding:10px;
+    width: 100%;
+    text-align: right;
+  }
 	:hover{
 		color: #fff;
 		text-decoration: none;
@@ -91,7 +97,7 @@ body {
       img {
         position: absolute;
         top: 17px;
-        left: 10px;
+        left: 13px;
       }
     }
     .iconColory {

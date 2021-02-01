@@ -23,6 +23,10 @@ a:hover {
           transform: translate(0, -10px);
 }
 
+.main {
+  width: 100vh;
+}
+
 .serv {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -40,7 +44,6 @@ a:hover {
           flex-direction: column;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  height: 100vh;
 }
 
 @media only screen and (max-width: 780px) {
@@ -71,7 +74,7 @@ a:hover {
   background-size: cover;
 }
 
-.servSharee {
+.servfarzand {
   background-image: url("../assets/Background/Group598.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,7 +103,7 @@ a:hover {
   border-radius: 10px;
   font-size: 26px;
   color: #115a23;
-  padding: 7px;
+  padding: 10px;
   text-align: center;
   background-color: #fdfdfd;
   -webkit-box-shadow: 10px 10px 7px -4px rgba(163, 163, 163, 0.438);
@@ -156,5 +159,19 @@ a:hover {
 .btnpayment .btnpayment:hover {
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
+}
+
+.fontsizservices {
+  font-size: 14px;
+  text-align: center;
+}
+
+.p {
+  font-size: 12px;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
 }
 /*# sourceMappingURL=services.css.map */

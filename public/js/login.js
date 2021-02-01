@@ -1,5 +1,5 @@
 $(document).ready(function(){
-   
+  localStorage.clear(); 
     $("#loginForm").on('submit',function(e){
           const name = $("#userName").val() ;
           const password = $("#password").val() ;
@@ -13,8 +13,8 @@ $(document).ready(function(){
         });
 //move after set loacalstorage   
         const handleData = function(res){
-          debugger;
-          localStorage.setItem("token_id" , res.id_token)
+ 
+          localStorage.setItem("id_token" , res.id_token)
           window.location.replace('./mainIcon.html')
         }
         var datares ;
@@ -41,39 +41,36 @@ $(document).ready(function(){
          
            })
         }
-})
- $('#guest').on('click' , function(){
-   window.location.replace ('./register.html')
- })
+        $('#guest').on('click' , function(){
+          window.location.replace ('./register.html')
+        })
+        // const checkEnter = function(){
+        //   const inputUser = $('#userName');
+        //   const inputpass = $('#password');
+        //   const messageuser = $('#validuser');
+        //   const messagepass = $('#validpass')
+        //   const chekuser = checkRequired(inputUser,messageuser);
+        //   const checkpass = checkRequired(inputpass,messagepass);
+        //   if(checkpass&&chekuser)
+        //   {
+        //     $("#btnpos").removeAttr('disabled')
+        //   }else
+        //   {
+        //     $("#btnpos").attr('disabled')
+        //   }
+        // }
+        const inputpass = $('#password');
+        inputpass.on('change', function(){
+        
+          if($("#password").val().length >= 1 && $('#userName').val().length >= 1 )
+          {
+            $("#submit").removeAttr('disabled');
+          }
+        })
+        
 
-// Wait for the DOM to be ready
-$(function() {
-  // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
-  $("#loginForm").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      userName: "required",
-      userPassword:{
-        required: true,
-        minlength: 5
-      }
-    },
-    // Specify validation error messages
-    messages: {
-      userName: "لطفا نام کاربری /کلمه عبور خود را وارد کنید",
-      userPassword: {
-        required: "رمز ورود را وارد کنید ",
-        minlength: "رمز ورود باید حداقل 5 کاراکتر باشد "
-      },
-    },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-    // submitHandler: function(form) {
-    //   form.submit();
-    // }
-  });
-});
+      
+})
+
+
+
