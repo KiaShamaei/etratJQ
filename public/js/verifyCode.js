@@ -108,6 +108,7 @@ $(document).ready(function () {
     const otp3 = $('#otp3').val();
     const otp4 = $('#otp4').val();
     const otp = otp1 + otp2 + otp3 + otp4;
+    if(otp.length){}
     if (Validcode(otp)) {
       const userMObile = localStorage.getItem('userMobile')
       getData(userMObile, otp);
@@ -117,11 +118,12 @@ $(document).ready(function () {
 
   })
 
-
+//check only number enter 
   function Validcode(inputText) {
 
     var otpFormat = /^\d{4}$/;
     if (inputText.match(otpFormat)) {
+      
       return true;
     }
     else {
@@ -132,9 +134,21 @@ $(document).ready(function () {
       return false;
     }
   }
-
-
-
+//check insert the value
+  const inputpass =$('#otp4');
+        inputpass.on('keyup', function(){
+        const otp1 = $('#otp1').val();
+        const otp2 = $('#otp2').val();
+        const otp3 = $('#otp3').val();
+        const otp4 = $('#otp4').val();
+        const otp = otp1 + otp2 + otp3 + otp4;
+        if(otp.length==4){
+          $("#submitBtn").removeAttr('disabled')
+        }else
+        {
+          alert('لطفا رمز پویا ارسالی را وارد کنید ')
+        }
+      })
 
 
 
