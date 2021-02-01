@@ -42,21 +42,38 @@ align-content: space-between;
     background-image: url("../assets/Background/Group596.png");
     background-repeat: no-repeat;
     background-size: cover;
+    
+@media only screen and (min-width: 1200px) {
+    background-image: url("../assets/Background/Group596@2x.png");
+    height: 100vh;
+}
 }
 .servNazr{
     background-image: url("../assets/Background/Group595.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width: 1200px) {
+        background-image: url("../assets/Background/Group595@2x.png");
+        height: 100vh;
+    }
 }
 .servSharee{
     background-image: url("../assets/Background/Group597.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width: 1200px) {
+        background-image: url("../assets/Background/Group597@2x.png");
+        height: 100vh;
+    }
 }
 .servfarzand{
     background-image: url("../assets/Background/Group598.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width: 1200px) {
+        background-image: url("../assets/Background/Group598@2x.png");
+        height: 100vh;
+    }
 }
 .enterPrice{
     direction: rtl;

@@ -62,10 +62,24 @@ a:hover {
   background-size: cover;
 }
 
+@media only screen and (min-width: 1200px) {
+  .servSadaghe {
+    background-image: url("../assets/Background/Group596@2x.png");
+    height: 100vh;
+  }
+}
+
 .servNazr {
   background-image: url("../assets/Background/Group595.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+  .servNazr {
+    background-image: url("../assets/Background/Group595@2x.png");
+    height: 100vh;
+  }
 }
 
 .servSharee {
@@ -74,10 +88,24 @@ a:hover {
   background-size: cover;
 }
 
+@media only screen and (min-width: 1200px) {
+  .servSharee {
+    background-image: url("../assets/Background/Group597@2x.png");
+    height: 100vh;
+  }
+}
+
 .servfarzand {
   background-image: url("../assets/Background/Group598.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+  .servfarzand {
+    background-image: url("../assets/Background/Group598@2x.png");
+    height: 100vh;
+  }
 }
 
 .enterPrice {
