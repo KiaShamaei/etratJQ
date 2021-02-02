@@ -15,7 +15,7 @@ $(document).ready(function(){
         const handleData = function(res){
  
           localStorage.setItem("id_token" , res.id_token)
-          window.location.replace('./mainIcon.html')
+          window.location.replace('./public/mainIcon.html')
         }
         var datares ;
         const getData =function(inputData){
@@ -42,7 +42,7 @@ $(document).ready(function(){
            })
         }
         $('#guest').on('click' , function(){
-          window.location.replace ('./register.html')
+          window.location.replace ('./public/register.html')
         })
         // const checkEnter = function(){
         //   const inputUser = $('#userName');
