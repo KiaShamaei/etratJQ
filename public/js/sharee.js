@@ -17,7 +17,7 @@ $(document).ready(function(){
               },
               
               success: function (data) {
-                localStorage.setItem('token',data.token);
+                //localStorage.setItem('token',data.token);
                 window.open("https://etrat.cloud.papraco.com/gateway/payment?code="+data.token)
         
               },
@@ -45,12 +45,15 @@ $(document).ready(function(){
          url: "https://etrat.cloud.papraco.com/api/account",
         headers :{
         accept: "*/*",
-        Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+        Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
         },
       // enter user name in dom   
         success: function (data) {
-          $('#username').html(data.firstName +" " +data.lastName);
-          $('#userdoc').html(data.email)
+          if(data.firstName!=null){
+            $('#username').html(data.firstName +" " +data.lastName);
+            $('#userdoc').html(data.email)
+          }
+          
     
         },
         error: function (err) {
@@ -98,7 +101,7 @@ $(document).ready(function(){
         $('#mainPrice').html(f);
       })
       //info of person login 
-      if (localStorage.getItem("token_id")){
+      if (localStorage.getItem("id_token")){
         getadminData();
     
       }

@@ -13,11 +13,11 @@ const ss="Bearer"+" "+localStorage.getItem('id_token');
            url: "https://etrat.cloud.papraco.com/api/transactions/code?amount="+amount+"&type-id="+typeid,
           headers :{
           accept: "*/*",
-          Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+          Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
           },
           
           success: function (data) {
-            localStorage.setItem('token',data.token);
+            //localStorage.setItem('token',data.token);
             window.open("https://etrat.cloud.papraco.com/gateway/payment?code="+data.token)
     
           },
@@ -44,7 +44,7 @@ const getadminData = function () {
      url: "https://etrat.cloud.papraco.com/api/account",
     headers :{
     accept: "*/*",
-    Authorization: "Bearer"+" "+localStorage.getItem('token_id'),
+    Authorization: "Bearer"+" "+localStorage.getItem('id_token'),
     },
   // enter user name in dom   
     success: function (data) {
@@ -97,7 +97,7 @@ $("#priceTotal").keypress(function (e) {
     $('#mainPrice').html(f);
   })
   //info of person login 
-  if (localStorage.getItem("token_id")){
+  if (localStorage.getItem("id_token")){
     getadminData();
 
   }
