@@ -60,7 +60,7 @@ $(document).ready(function(){
         //   }
         // }
         const inputpass = $('#password');
-        inputpass.on('change', function(){
+        inputpass.on('input', function(){
         
           if($("#password").val().length >= 1 && $('#userName').val().length >= 1 )
           {
